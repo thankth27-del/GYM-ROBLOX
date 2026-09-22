@@ -1,0 +1,6 @@
+<%- include('partials/header') %>
+<div class="page-heading"><div><p class="eyebrow">CLASS MANAGEMENT</p><h1>Class</h1></div><a class="button" href="/classes/create">+ เพิ่ม Class</a></div>
+<div class="table-wrap"><table><thead><tr><th>CLASS ID</th><th>ชื่อ Class</th><th>TRAINER ID</th><th>จำนวนสูงสุด</th><th>ตารางเรียน</th></tr></thead><tbody>
+  <% classes.forEach(item => { %><tr><td><%= item.CLASS_ID %></td><td><%= item.CLASS_NAME %></td><td><%= item.TRAINER_ID %></td><td><%= item.CLASS_CAPACITY %></td><td><%= item.CLASS_SCHEDULE %></td></tr><% }) %>
+</tbody></table></div>
+<%- include('partials/footer') %>

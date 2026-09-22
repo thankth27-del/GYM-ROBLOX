@@ -1,0 +1,6 @@
+<%- include('partials/header') %>
+<div class="page-heading"><div><p class="eyebrow">TRAINER MANAGEMENT</p><h1>Trainer</h1></div><a class="button" href="/trainers/create">+ เพิ่ม Trainer</a></div>
+<div class="table-wrap"><table><thead><tr><th>TRAINER ID</th><th>ชื่อ Trainer</th><th>ความเชี่ยวชาญ</th><th>เบอร์โทรศัพท์</th></tr></thead><tbody>
+  <% trainers.forEach(trainer => { %><tr><td><%= trainer.TRAINER_ID %></td><td><%= trainer.TRAINER_NAME %></td><td><%= trainer.SPECIALTY %></td><td><%= trainer.TRAINER_PHONE %></td></tr><% }) %>
+</tbody></table></div>
+<%- include('partials/footer') %>

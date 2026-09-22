@@ -1,0 +1,20 @@
+<%- include('partials/header') %>
+<div class="page-heading"><div><p class="eyebrow">NEW MEMBER</p><h1>เพิ่มสมาชิก</h1></div><a class="button secondary" href="/members">← กลับ</a></div>
+<form class="form-card" method="POST" action="/members/create">
+  <div class="form-grid">
+    <label>MEMBER ID<input name="MEMBER_ID" maxlength="5" placeholder="M0006" required></label>
+    <label>ชื่อสมาชิก<input name="MEMBER_NAME" required></label>
+    <label>บ้านเลขที่<input name="MEMBER_HOUSE_NO" required></label>
+    <label>ถนน<input name="MEMBER_STREET" required></label>
+    <label>แขวง/ตำบล<input name="MEMBER_SUBDISTRICT" required></label>
+    <label>เขต/อำเภอ<input name="MEMBER_DISTRICT" required></label>
+    <label>จังหวัด<input name="MEMBER_PROVINCE" required></label>
+    <label>รหัสไปรษณีย์<input name="MEMBER_POSTCODE" maxlength="5" required></label>
+    <label>วันเกิด<input type="date" name="BIRTH_DATE" required></label>
+    <label>เพศ<select name="GENDER" required><option value="ชาย">ชาย</option><option value="หญิง">หญิง</option><option value="อื่น ๆ">อื่น ๆ</option></select></label>
+    <label>เริ่มเป็นสมาชิก<input type="date" name="MEMBER_SINCE_DATE" required></label>
+    <label>Robux Balance<input type="number" name="ROBUX_BALANCE" min="0" value="0" required></label>
+  </div>
+  <button class="button" type="submit">บันทึกสมาชิก</button>
+</form>
+<%- include('partials/footer') %>

@@ -1,0 +1,15 @@
+<%- include('partials/header') %>
+<section class="hero">
+  <p class="eyebrow">LEVEL UP YOUR FITNESS</p>
+  <h1>GYM ROBLOX Dashboard</h1>
+  <p>ภาพรวมข้อมูลจากฐานข้อมูล SQLite แบบเรียลไทม์</p>
+</section>
+<section class="stat-grid">
+  <div class="stat-card"><span>สมาชิก</span><strong><%= stats.members %></strong></div>
+  <div class="stat-card"><span>Trainer</span><strong><%= stats.trainers %></strong></div>
+  <div class="stat-card"><span>Class</span><strong><%= stats.classes %></strong></div>
+  <div class="stat-card"><span>Membership Plan</span><strong><%= stats.plans %></strong></div>
+  <div class="stat-card"><span>Subscription</span><strong><%= stats.subscriptions %></strong></div>
+  <div class="stat-card"><span>Enrollment</span><strong><%= stats.enrollments %></strong></div>
+</section>
+<%- include('partials/footer') %>

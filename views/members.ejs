@@ -1,0 +1,6 @@
+<%- include('partials/header') %>
+<div class="page-heading"><div><p class="eyebrow">MEMBER MANAGEMENT</p><h1>สมาชิก</h1></div><a class="button" href="/members/create">+ เพิ่มสมาชิก</a></div>
+<div class="table-wrap"><table><thead><tr><th>MEMBER ID</th><th>ชื่อสมาชิก</th><th>เพศ</th><th>วันเกิด</th><th>เริ่มเป็นสมาชิก</th><th>Robux</th></tr></thead><tbody>
+  <% members.forEach(member => { %><tr><td><%= member.MEMBER_ID %></td><td><%= member.MEMBER_NAME %></td><td><%= member.GENDER %></td><td><%= member.BIRTH_DATE %></td><td><%= member.MEMBER_SINCE_DATE %></td><td class="robux"><%= member.ROBUX_BALANCE %> R$</td></tr><% }) %>
+</tbody></table></div>
+<%- include('partials/footer') %>

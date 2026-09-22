@@ -1,0 +1,10 @@
+<%- include('partials/header') %>
+<div class="page-heading"><div><p class="eyebrow">NEW CLASS</p><h1>เพิ่ม Class</h1></div><a class="button secondary" href="/classes">← กลับ</a></div>
+<form class="form-card" method="POST" action="/classes/create"><div class="form-grid">
+  <label>CLASS ID<input name="CLASS_ID" maxlength="5" placeholder="CL004" required></label>
+  <label>ชื่อ Class<input name="CLASS_NAME" required></label>
+  <label>Trainer<select name="TRAINER_ID" required><option value="">เลือก Trainer</option><% trainers.forEach(trainer => { %><option value="<%= trainer.TRAINER_ID %>"><%= trainer.TRAINER_ID %> - <%= trainer.TRAINER_NAME %></option><% }) %></select></label>
+  <label>จำนวนผู้เรียนสูงสุด<input type="number" name="CLASS_CAPACITY" min="1" required></label>
+  <label class="wide">ตารางเรียน<input name="CLASS_SCHEDULE" placeholder="จ พ ศ 16:00-17:00" required></label>
+</div><button class="button" type="submit">บันทึก Class</button></form>
+<%- include('partials/footer') %>

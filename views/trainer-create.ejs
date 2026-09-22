@@ -1,0 +1,9 @@
+<%- include('partials/header') %>
+<div class="page-heading"><div><p class="eyebrow">NEW TRAINER</p><h1>เพิ่ม Trainer</h1></div><a class="button secondary" href="/trainers">← กลับ</a></div>
+<form class="form-card" method="POST" action="/trainers/create"><div class="form-grid">
+  <label>TRAINER ID<input name="TRAINER_ID" maxlength="5" placeholder="T0004" required></label>
+  <label>ชื่อ Trainer<input name="TRAINER_NAME" required></label>
+  <label>ความเชี่ยวชาญ<input name="SPECIALTY" required></label>
+  <label>เบอร์โทรศัพท์<input name="TRAINER_PHONE" pattern="[0-9]{10}" maxlength="10" placeholder="0812345678" required></label>
+</div><button class="button" type="submit">บันทึก Trainer</button></form>
+<%- include('partials/footer') %>
